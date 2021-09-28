@@ -17,14 +17,26 @@ Perform the following within your Auth0 Tenant Dashboard
 - Write down your domain (e.g. **{domain}.us.auth0.com** )
 - Write down your client id
 - Write down your client secrets
+
+  ![Client Configuration 1!](/docs/Auth0ClientConfiguration.png)
 - Add **https://localhost:5001/callback** to Allowed Callback URLs
 - Add **https://localhost:5001** to Allowed Logout URLs
+
+  ![Client Configuration 2!](/docs/Auth0ClientConfiguration2.png)
 - Through the **Connections** tab, enable the connection for the database you created previously
 
+  ![Client Configuration 3!](/docs/Auth0ClientConfiguration3.png)
 ## API Configuration
 
  - Create a new API, **Applications->APIs**, name: "auth0apiexample" , identifier: "https://api.example.com"
+
+   ![Api Configuration 1!](/docs/Auth0ApiConfiguration1.png)
  - Add a single scope, through the **permissions** tab, add the Permission: "weather:read" and the description "Allows reading of weather forecast", although the description can be anything.
+
+   ![Api Configuration 2!](/docs/Auth0ApiConfiguration2.png)
+
+- Authorize The Client application to use the API.
+   ![Api Configuration 3!](/docs/Auth0ApiConfiguration3.png)
 
 ## Auth0 Rule
 
@@ -72,7 +84,7 @@ Below are the unencoded payloads of the id_token and access_token return from th
           "iat": 1632797657,
           "exp": 1632833657,
           "nonce": "637683944441976546.MmRiM2Q4MDEtNWUwMi00YzE4LWFlYjMtYzUyODEzNzJjNWUwZjRjYTQ4OTEtYzMxYy00ZDVhLWIwYzEtZTE4YmViMTVmNDI0"
-}
+        }
 
 
 
